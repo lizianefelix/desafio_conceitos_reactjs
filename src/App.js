@@ -14,8 +14,7 @@ function App() {
 
   async function handleAddRepository() {
     const response = await api.post('repositories', {
-      title: `Novo projeto ${Date.now()}`,
-      owner: "Liziane Felix"
+      title: Math.random().toString(36).substr(2)
     });
 
     const repository = response.data;
